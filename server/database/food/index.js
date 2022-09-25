@@ -30,4 +30,4 @@ addOns:[
 
 }) 
 
-export const FoodMOdel = mongosse.model("foods",FoodSchema);
+export const FoodModel = mongoose.model("foods",FoodSchema);
