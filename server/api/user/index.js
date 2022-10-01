@@ -1,7 +1,7 @@
 import express from "express";
 import { UserModel} from "../../database/allModels";
 import passport from "passport";
-import { get } from "mongoose";
+//import { get } from "mongoose";
 
 const Router = express.Router();
 
@@ -67,8 +67,10 @@ async(req,res)=>{
    const { _id } = req.params;
    const { userData} = req.body;
 
+      // Task: Validate User Data
    
    userData.password = undefined;
+
 
    const updateUserData = await UserModel.findByIdAndUpdate(
     _id,
