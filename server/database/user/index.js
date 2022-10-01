@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
 
 // attachments
 UserSchema.methods.generateJwtToken = function () {
-  return jwt.sign({user:this._id.toString()},"zomatoApp");
+  return jwt.sign({user:this._id.toString()},process.env.JWTSECRET);
 };
 
 
@@ -70,3 +70,21 @@ UserSchema.pre('save',function (next) {
 });
 
 export const UserModel = mongoose.model("users", UserSchema);
+
+
+
+
+/*_id: ObjectId('6335a9cab2d2e6d64e393ad6')
+name:"Domino's Pizz"
+address: "Delhi"
+mapLocation : "12.12345.6789"
+cuisins: [
+  hjk,hjjk
+  ]
+restaurantTimings: "11am-11pm"
+ContactNumber:"9786756789"
+website:"www.dominos.com"
+popularDishes:[
+  jkk,jkkl]
+averageCost:300
+*/
