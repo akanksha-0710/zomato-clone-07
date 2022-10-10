@@ -1,12 +1,12 @@
 import express from "express";
 import passport from "passport";
 
-import {UserModel} from "../../database/allModels";
+import {UserModel} from "../../../database/allModels";
 
 import {
     ValidateSignin,
     ValidateSignup,
-  } from "../../validation/auth.validation";
+  } from "../../../validation/auth.validation";
   
 
 const Router = express.Router();
